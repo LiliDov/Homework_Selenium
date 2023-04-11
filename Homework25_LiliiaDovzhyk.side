@@ -1,0 +1,889 @@
+{
+  "id": "95eb388d-2bed-484e-aff2-2969df818ae3",
+  "version": "2.0",
+  "name": "Homework25_LiliiaDovzhyk",
+  "url": "https://bookopt.com.ua/",
+  "tests": [{
+    "id": "36851bef-ae88-4f58-bc53-ef77492821d4",
+    "name": "Testing login functionality",
+    "commands": [{
+      "id": "9c7d492b-4800-4006-9390-7c01e9449aae",
+      "comment": "",
+      "command": "open",
+      "target": "https://bookopt.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca6a71d3-5aec-4a13-a356-abf3194f9347",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.icon-user-o",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52e1e3f9-939c-43a9-9572-12253ab953d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-user-o",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9985dc2-851a-4e0c-a407-dee5eec13cf0",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Мій акаунт",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03015a7e-6652-45f0-af18-3eee1f469240",
+      "comment": "",
+      "command": "verifyNotText",
+      "target": "css=.youama-login-window h3",
+      "targets": [],
+      "value": "Особистий кабінет"
+    }, {
+      "id": "3f23dfdd-e891-42aa-a773-35d2c049b394",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.youama-login-window .youama-window-title",
+      "targets": [
+        ["css=.youama-login-window .youama-window-title", "css:finder"],
+        ["xpath=//div[@id='header-account']/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "ВХІД"
+    }, {
+      "id": "016bd37d-d4af-4dd8-83f4-a2bbd4382773",
+      "comment": "",
+      "command": "click",
+      "target": "id=youama-email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb10d992-c425-4f07-ad90-511fe1c5a109",
+      "comment": "",
+      "command": "store",
+      "target": "korinets@meta.ua",
+      "targets": [],
+      "value": "MyEmail"
+    }, {
+      "id": "3c8b0566-4b26-4331-8268-227b89a1b3cf",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='youama-email']",
+      "targets": [
+        ["id=youama-email", "id"],
+        ["name=youama-email", "name"],
+        ["css=.youama-window-content:nth-child(1) #youama-email", "css:finder"],
+        ["xpath=//input[@id='youama-email']", "xpath:attributes"],
+        ["xpath=//div[@id='header-account']/div/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${MyEmail}"
+    }, {
+      "id": "f3b36c80-0e32-4c00-86ed-082261a76e04",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='youama-password']",
+      "targets": [
+        ["id=youama-password", "id"],
+        ["name=youama-password", "name"],
+        ["css=.youama-window-content:nth-child(1) #youama-password", "css:finder"],
+        ["xpath=//input[@id='youama-password']", "xpath:attributes"],
+        ["xpath=//div[@id='header-account']/div/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f28754fc-69e3-4fc8-ae18-cfd6d25745c1",
+      "comment": "",
+      "command": "store",
+      "target": "08101988chips",
+      "targets": [],
+      "value": "MyPassword"
+    }, {
+      "id": "db38d488-4a1a-4ce0-8460-0969b731e355",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='youama-password']",
+      "targets": [
+        ["id=youama-password", "id"],
+        ["name=youama-password", "name"],
+        ["css=.youama-window-content:nth-child(1) #youama-password", "css:finder"],
+        ["xpath=//input[@id='youama-password']", "xpath:attributes"],
+        ["xpath=//div[@id='header-account']/div/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${MyPassword}"
+    }, {
+      "id": "f3e2788a-4345-4423-a92e-299b66027158",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-proceed-checkout:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b2663dc-3477-4b3c-b7be-d2df601d5e21",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.icon-user-o",
+      "targets": [
+        ["css=.icon-user-o", "css:finder"],
+        ["xpath=//header[@id='header']/div/div[3]/div/a[2]/i", "xpath:idRelative"],
+        ["xpath=//a[2]/i", "xpath:position"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "a3ff1a1c-3857-4126-b4e9-2b15ada8ede0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"header\"]/div[1]/div[3]/div/a[2]/i",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bbb06f2-9ade-4c55-ac22-bdabf01dee43",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=header-account",
+      "targets": [
+        ["id=header-account", "id"],
+        ["css=#header-account", "css:finder"],
+        ["xpath=//div[@id='header-account']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/div[5]", "xpath:idRelative"],
+        ["xpath=//header/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb152592-f69f-430c-a455-9a97266907b4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(.,'Вихід')]",
+      "targets": [
+        ["linkText=Вихід", "linkText"],
+        ["css=.my-logout", "css:finder"],
+        ["xpath=//a[contains(text(),'Вихід')]", "xpath:link"],
+        ["xpath=//div[@id='ac-links']/div/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://bookopt.com.ua/customer/account/logout/')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вихід')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b20955be-2c4a-4b1c-9865-73dc42e9f780",
+    "name": "Test subscribe function",
+    "commands": [{
+      "id": "fd5ec8a9-2049-46ff-ba2a-7b91a934dd0d",
+      "comment": "",
+      "command": "open",
+      "target": "https://bookopt.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23f28a5a-3e5d-4aaa-accf-b185199647b0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[2]/i",
+      "targets": [
+        ["css=.icon-user-o", "css:finder"],
+        ["xpath=//header[@id='header']/div/div[3]/div/a[2]/i", "xpath:idRelative"],
+        ["xpath=//a[2]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f579306-54df-46f9-b423-dd3484c4727e",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Мій акаунт",
+      "targets": [
+        ["linkText=Мій акаунт", "linkText"],
+        ["css=.my-acc", "css:finder"],
+        ["xpath=//a[contains(text(),'Мій акаунт')]", "xpath:link"],
+        ["xpath=//div[@id='ac-links']/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://bookopt.com.ua/customer/account/')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Мій акаунт')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae31014e-034f-404e-8d0a-f1e2c0cfcab0",
+      "comment": "",
+      "command": "verifyNotText",
+      "target": "css=.youama-login-window h3",
+      "targets": [
+        ["css=.youama-login-window h3", "css:finder"],
+        ["xpath=//div[@id='header-account']/div/div/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": "Особистий кабінет"
+    }, {
+      "id": "7465e4b0-2aa2-47c7-beaa-27415c9ebe39",
+      "comment": "",
+      "command": "click",
+      "target": "css=.youama-login-window .close",
+      "targets": [
+        ["css=.youama-login-window .close", "css:finder"],
+        ["xpath=//div[@id='header-account']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0704cf3-5df2-40c3-b285-c6c0e42d454b",
+      "comment": "",
+      "command": "click",
+      "target": "id=newsletter",
+      "targets": [
+        ["id=newsletter", "id"],
+        ["name=email", "name"],
+        ["css=#newsletter", "css:finder"],
+        ["xpath=//input[@id='newsletter']", "xpath:attributes"],
+        ["xpath=//form[@id='newsletter-validate-detail']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fc18df4-c8ab-493a-b782-4dce98541949",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=newsletter",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d08ecefb-50c5-4f52-b569-0a9b495e1794",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.actions > .button > span > span",
+      "targets": [
+        ["css=.actions > .button > span > span", "css:finder"],
+        ["xpath=//form[@id='newsletter-validate-detail']/div[2]/div[2]/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span/span", "xpath:position"]
+      ],
+      "value": "Підписатись"
+    }, {
+      "id": "adecadf5-7b14-4470-a696-e07c6ef64202",
+      "comment": "",
+      "command": "store",
+      "target": "lilidov88@gmail.com",
+      "targets": [],
+      "value": "MyEmailSub"
+    }, {
+      "id": "08b57b80-5b3e-477c-85c3-346ce094b841",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["id=newsletter", "id"],
+        ["name=email", "name"],
+        ["css=#newsletter", "css:finder"],
+        ["xpath=//input[@id='newsletter']", "xpath:attributes"],
+        ["xpath=//form[@id='newsletter-validate-detail']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${MyEmailSub}"
+    }, {
+      "id": "6f2b6d25-384c-4b7f-8cc7-f09d6846b7bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.actions > .button",
+      "targets": [
+        ["css=.actions > .button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='newsletter-validate-detail']/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Підписатись')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "07f5f853-1ee6-42a6-b60f-049c7f4c2d1a",
+    "name": "Test adding product to the chart",
+    "commands": [{
+      "id": "c491389d-74ae-48a8-aaaa-76e1370b4c8c",
+      "comment": "",
+      "command": "open",
+      "target": "https://bookopt.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e9bcec4-8070-446e-b029-5592ef1e2bc7",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.UI-SEARCH",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bffa9b28-70a5-44a0-ba7d-cbf979b0db0f",
+      "comment": "",
+      "command": "store",
+      "target": "украдене щастя",
+      "targets": [],
+      "value": "MyBook"
+    }, {
+      "id": "5fb0396f-ac22-430e-976f-952e0576765d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.UI-SEARCH",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.UI-SEARCH", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='header-search']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "434a5359-8cc4-423f-af83-6094b7c0e09d",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@name='q']",
+      "targets": [],
+      "value": "${MyBook}"
+    }, {
+      "id": "7986fce7-3b8b-4910-941d-0c05de0ce72a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.nav-submit-button > .button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='header-search']/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Шукати')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03903265-74cb-4a9c-a71a-007b2cc5e2de",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//IMG[@id='product-collection-image-56583']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8c1568e-d768-4f28-93c4-292de64f31fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=product-collection-image-56583",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fa395ac-fd9a-4475-8a9b-7c1e0b0dcd82",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='qty']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3095cba-f009-4e0c-9a12-5149eb9faa24",
+      "comment": "",
+      "command": "store",
+      "target": "2",
+      "targets": [],
+      "value": "Number"
+    }, {
+      "id": "277ebd08-d47a-4e16-9976-46a37f3f6d99",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='qty']",
+      "targets": [],
+      "value": "${Number}"
+    }, {
+      "id": "578631fd-1b2b-4cef-b438-3611bc5b85d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-to-cart-buttons span > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32e66f51-892d-48d7-852b-1ba91070ef0e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cart_block_header",
+      "targets": [
+        ["css=.cart_block_header", "css:finder"],
+        ["xpath=//div[@id='header-cart']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "c49d1008-7bbe-470b-b6ae-aaf6ecbeaeae",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.block-subtitle > span",
+      "targets": [
+        ["css=.block-subtitle > span", "css:finder"],
+        ["xpath=//div[@id='ac-cart-sidebar0']/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Додані товари')]", "xpath:innerText"]
+      ],
+      "value": "Додані товари"
+    }, {
+      "id": "88304d3f-2332-4f0a-b05f-7fe0402aaec6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Перейти в кошик",
+      "targets": [
+        ["linkText=Перейти в кошик", "linkText"],
+        ["css=.cart-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Перейти в кошик')]", "xpath:link"],
+        ["xpath=//div[@id='ac-cart-sidebar0']/div/div[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://bookopt.com.ua/checkout/cart/?___SID=U')]", "xpath:href"],
+        ["xpath=//div[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Перейти в кошик')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54f2cd66-7505-4862-83e4-3592bece4cbf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.last > .product-cart-image img",
+      "targets": [
+        ["css=.last > .product-cart-image img", "css:finder"],
+        ["xpath=(//img[@alt='Украдене щастя (Нове оформлення)'])[2]", "xpath:img"],
+        ["xpath=//table[@id='shopping-cart-table']/tbody/tr[2]/td/a/img", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/a/img", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "fc735372-51e8-4c17-8e4b-89c9e9f22e3c",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c161143-6f8a-442b-85b9-ca650d6fbf34",
+      "comment": "",
+      "command": "click",
+      "target": "name=update_cart_action",
+      "targets": [
+        ["css=#empty_cart_button > span > span", "css:finder"],
+        ["xpath=//button[@id='empty_cart_button']/span/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d695e52f-793c-48d8-a813-601a44c07742",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Ви впевнені, що хочете видалити всі товари з кошика для покупок?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "652923ce-0afa-4e3a-a89a-0fb5376b583d",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd344175-d8e6-4bf7-8ced-1fa8758d9e11",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//li/button/span/span",
+      "targets": [
+        ["css=.btn-secondary > span > span", "css:finder"],
+        ["xpath=//div[@id='ac-cart']/div/div[4]/div/ul/li/button/span/span", "xpath:idRelative"],
+        ["xpath=//li/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "08ef9955-3ab4-4465-891e-f467f2e8aad2",
+    "name": "Test adding product to the wish list",
+    "commands": [{
+      "id": "d794e5e2-aa64-4852-b592-73f62817e7ba",
+      "comment": "",
+      "command": "open",
+      "target": "https://bookopt.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c568248-2b6a-4364-bc4f-948544f30a00",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-user-o",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7303706-fc01-4ad1-9652-c5d4c0066e7d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//INPUT[@id='youama-email']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8311f744-c73e-4d46-8de9-726b7c1ff289",
+      "comment": "",
+      "command": "store",
+      "target": "korinets@meta.ua",
+      "targets": [],
+      "value": "MyEmail"
+    }, {
+      "id": "47eb7de1-02b5-4626-8280-077b33fe078a",
+      "comment": "",
+      "command": "type",
+      "target": "id=youama-email",
+      "targets": [
+        ["id=youama-email", "id"],
+        ["name=youama-email", "name"],
+        ["css=.youama-window-content:nth-child(1) #youama-email", "css:finder"],
+        ["xpath=//input[@id='youama-email']", "xpath:attributes"],
+        ["xpath=//div[@id='header-account']/div/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${MyEmail}"
+    }, {
+      "id": "5b59a68b-6ab0-455c-a345-c31f0160c638",
+      "comment": "",
+      "command": "click",
+      "target": "id=youama-password",
+      "targets": [
+        ["id=youama-password", "id"],
+        ["name=youama-password", "name"],
+        ["css=.youama-window-content:nth-child(1) #youama-password", "css:finder"],
+        ["xpath=//input[@id='youama-password']", "xpath:attributes"],
+        ["xpath=//div[@id='header-account']/div/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8365f3de-233c-4e9d-a883-46caa4b7e742",
+      "comment": "",
+      "command": "store",
+      "target": "08101988chips",
+      "targets": [],
+      "value": "MyPassword"
+    }, {
+      "id": "deb8c1b4-3ea3-482f-b3e5-7b45f26eff02",
+      "comment": "",
+      "command": "type",
+      "target": "id=youama-password",
+      "targets": [
+        ["id=youama-password", "id"],
+        ["name=youama-password", "name"],
+        ["css=.youama-window-content:nth-child(1) #youama-password", "css:finder"],
+        ["xpath=//input[@id='youama-password']", "xpath:attributes"],
+        ["xpath=//div[@id='header-account']/div/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${MyPassword}"
+    }, {
+      "id": "4623bded-399c-4c56-b9cb-e3d7485a803c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-proceed-checkout:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4330ba82-2a76-430f-81e0-f9f48f6bdd18",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.UI-SEARCH", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='header-search']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbcf2472-05e0-42a3-9d8d-19946845978b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@name='q']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39e1f2ab-1cb8-4c3a-b07b-ebbfe3bd20af",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@name='q']",
+      "targets": [],
+      "value": "украдене щастя"
+    }, {
+      "id": "9b394db3-9998-4471-83b6-3d04af27907f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//BUTTON[@type='submit'][text()='Шукати']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17464c3d-3572-450d-ac6d-52ce583bc7ba",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=product-collection-image-56583",
+      "targets": [
+        ["id=product-collection-image-56583", "id"],
+        ["css=#product-collection-image-56583", "css:finder"],
+        ["xpath=//img[@alt='Украдене щастя (Нове оформлення)']", "xpath:img"],
+        ["xpath=//img[@id='product-collection-image-56583']", "xpath:attributes"],
+        ["xpath=//a[@id='product_click_list']/img", "xpath:idRelative"],
+        ["xpath=//a[2]/img", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "022d8f6c-d72c-4244-bffb-334faff76c46",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//IMG[@id='product-collection-image-56583']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2695554-07ae-44ee-b8bb-c9cba4abf4aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Украдене щастя (Нове оформлення)",
+      "targets": [
+        ["linkText=Украдене щастя (Нове оформлення)", "linkText"],
+        ["css=.item:nth-child(1) .product-info #product_click_list", "css:finder"],
+        ["xpath=//a[contains(text(),'Украдене щастя (Нове оформлення)')]", "xpath:link"],
+        ["xpath=(//a[@id='product_click_list'])[2]", "xpath:attributes"],
+        ["xpath=//html[@id='top']/body/div[3]/div/div[2]/div/div[3]/div/div/div[2]/div/ul/li/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://bookopt.com.ua/ukradene-schastja-nove-oformlennja.html')])[2]", "xpath:href"],
+        ["xpath=//li/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Украдене щастя (Нове оформлення)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48f15a7c-13b6-419e-be31-399b3238cfa5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//A[@onclick=''][text()='Додати до обраного'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed176d4e-8544-4516-93a5-cd118b5ac02a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.block-wishlist > .block-title p",
+      "targets": [],
+      "value": "Список побажань"
+    }, {
+      "id": "981957da-5baa-44bc-ac90-c55232103177",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, 'https://bookopt.com.ua/wishlist/?___SID=U')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c0b5690-94f3-4b66-abc7-8d95146a6972",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//A[@onclick=''][text()='Remove item']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "289336ae-79cd-4699-b83d-e562af192062",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-user-o",
+      "targets": [
+        ["css=.icon-user-o", "css:finder"],
+        ["xpath=//header[@id='header']/div/div[3]/div/a[2]/i", "xpath:idRelative"],
+        ["xpath=//a[2]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dd37b7d-26a2-4c4a-8295-def8c82379ac",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//A[@href='https://bookopt.com.ua/customer/account/logout/'][text()='Вихід']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e19c4e93-4191-429d-895f-c9ac1e113880",
+    "name": "Test menu navigation",
+    "commands": [{
+      "id": "4faac91d-2d4a-41d7-a271-f974d91df700",
+      "comment": "",
+      "command": "open",
+      "target": "https://bookopt.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7516a5a-828f-4eee-b541-ad7995f0e5c4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"header-nav\"]/ul/li[1]/a/span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d75997a-3938-435f-a7c5-aea0e2c8e4b6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Книги для дошкільнят",
+      "targets": [
+        ["linkText=Книги для дошкільнят", "linkText"],
+        ["css=.first > .item:nth-child(1) li:nth-child(2) > .category-name", "css:finder"],
+        ["xpath=//a[contains(text(),'Книги для дошкільнят')]", "xpath:link"],
+        ["xpath=//html[@id='top']/body/div[3]/div/div[2]/div/div[2]/div/div[3]/ul/li/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://bookopt.com.ua/knigi-dlja-doshkil-njat')])[2]", "xpath:href"],
+        ["xpath=//li/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "013e5ac5-9f72-4a65-a618-dbb0c0ce06da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-title > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abed955a-b3ce-4e37-966c-9dd65381c2f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Канцтовари",
+      "targets": [
+        ["linkText=Канцтовари", "linkText"],
+        ["css=.nav-2 > .default", "css:finder"],
+        ["xpath=//div[@id='header-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://bookopt.com.ua/kanctovari')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Канцтовари')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "979a6bdc-f447-43a1-b350-21014348defc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=ТОП 100",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9aef517b-08fa-4041-aa83-acec1577dcd0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=ТОП 100",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b99ed5e0-1031-4218-81f7-c27306c9482b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Новинки",
+      "targets": [
+        ["linkText=Новинки", "linkText"],
+        ["css=.add-menu > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Новинки')]", "xpath:link"],
+        ["xpath=//div[@id='nav-container']/div[2]/div[3]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/new-product')]", "xpath:href"],
+        ["xpath=//div[2]/div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Новинки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9997e15e-e335-46ab-87c6-b459c9357eea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Новинки",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "031fb038-c2ef-482c-ad55-2823b6f1c3a6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=SALE",
+      "targets": [
+        ["linkText=SALE", "linkText"],
+        ["css=.menu-sale", "css:finder"],
+        ["xpath=//a[contains(text(),'SALE')]", "xpath:link"],
+        ["xpath=//div[@id='nav-container']/div[2]/div[3]/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/sale')]", "xpath:href"],
+        ["xpath=//div[2]/div[3]/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'SALE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23358428-e883-436e-bc7c-1fea0327dd64",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=SALE",
+      "targets": [
+        ["linkText=SALE", "linkText"],
+        ["css=.menu-sale", "css:finder"],
+        ["xpath=//a[contains(text(),'SALE')]", "xpath:link"],
+        ["xpath=//div[@id='nav-container']/div[2]/div[3]/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/sale')]", "xpath:href"],
+        ["xpath=//div[2]/div[3]/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'SALE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca397932-4d7b-4a8f-90ae-43711ce06d76",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Видавництва",
+      "targets": [
+        ["linkText=Видавництва", "linkText"],
+        ["css=.add-menu > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Видавництва')]", "xpath:link"],
+        ["xpath=//div[@id='nav-container']/div[2]/div[3]/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/publishing-house')]", "xpath:href"],
+        ["xpath=//div[2]/div[3]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Видавництва')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40302f7c-60d8-4997-94ab-f673546ab6d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Видавництва",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98fbafc9-6516-469f-b834-131411edf52f",
+      "comment": "",
+      "command": "store",
+      "target": "АССА",
+      "targets": [],
+      "value": "MyPublisher"
+    }, {
+      "id": "31b8a2e5-aeaf-49ec-a666-547e1f030bd0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.m-alpha-list:nth-child(21) li:nth-child(30)",
+      "targets": [],
+      "value": "${MyPublisher}"
+    }, {
+      "id": "d6c5dbe8-b438-407e-b324-9817bbb884fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${MyPublisher}",
+      "targets": [
+        ["linkText=Видавництва", "linkText"],
+        ["css=.add-menu > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Видавництва')]", "xpath:link"],
+        ["xpath=//div[@id='nav-container']/div[2]/div[3]/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/publishing-house')]", "xpath:href"],
+        ["xpath=//div[2]/div[3]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Видавництва')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce261943-226f-4434-8a30-dd39c162c2af",
+      "comment": "",
+      "command": "click",
+      "target": "id=header-cart",
+      "targets": [
+        ["css=.header-p1", "css:finder"],
+        ["xpath=//div[@id='head_phone']/div/div/ul/li", "xpath:idRelative"],
+        ["xpath=//li", "xpath:position"],
+        ["xpath=//li[contains(.,'068 - 301 - 02 - 20')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2b8efcc8-511f-4422-b27a-50d04d4fd0a2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://bookopt.com.ua/"],
+  "plugins": []
+}
